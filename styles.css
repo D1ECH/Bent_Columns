@@ -28,8 +28,10 @@
 .grid-container div {
     text-align: center;
     color: wheat;
-    border: 1px solid white;
     border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     /*Esto se aplica a todos los divs dentro de la clase que hemos especificado, pero si 
     queremos tocarlos individualmente, es decir, modificar cada celda sola pues tenemos que
@@ -52,42 +54,55 @@
                                 --> finaliza en la columna 6*/
     background: rgb(134,129,78);
     background: radial-gradient(circle, rgba(134,129,78,1) 0%, rgba(0,0,0,1) 100%);
+    border: 1px solid white;
     grid-area: 2 / 1 / 4 / 1;
 }
 
 .item6{
     background: #fff05f;
     grid-area: 3/1/4/2;
+    border: 1px solid white;
 }
 
 
 .item2{
     background-color: white;
     grid-area: 2 / 2 / 4 / 2;
+    border: 1px solid white;
 }
 
 .item3{
     background-color: white;
     grid-area: 2/3/3/4;
+    border: 1px solid white;
 }
 
 .item4{
     background-color: white;
     grid-row: 3/span 2;
+    border: 1px solid white;
 }
 
 .item5{
     background-color: white;
     grid-row: 4;
     grid-column: 1/span 2;
+    border: 1px solid white;
 }
 
 .item7{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid grey;
     background-color: black;
     grid-area: 1/1/2/4;
 }
 
 @media all and (max-width: 900px){
+    .grid-container{
+        gap: 45px;
+    }
     .item1{
         grid-row: 2/span 2;
         grid-column: 1/span 2;
@@ -95,31 +110,28 @@
     .item6{
         grid-area: 3/1/4/3;
     }
-    
-    
     .item2{
         grid-area: 2 / 3 / 4 / 4;
     }
-    
     .item3{
         grid-area: 1/3/2/4;
     }
-    
     .item4{
         grid-row: 4/span 1;
     }
-    
     .item5{
         grid-row: 4;
         grid-column: 1/span 2;
     }
-    
     .item7{
-        grid-area: 1/1/2/4;
+        grid-area: 1/1/2/3;
     }
 }
 
-@media all and (max-width: 790px){
+@media all and (max-width: 850px){
+    .grid-container{
+        gap: 25px;
+    }
     .item1{
         grid-row: 2/span 2;
         grid-column: 1/span 2;
@@ -127,54 +139,45 @@
     .item6{
         grid-area: 3/1/4/3;
     }
-    
-    
     .item2{
         grid-area: 4/1/5/1;
     }
-    
     .item3{
         grid-area: 1/2/2/3;
     }
-    
     .item4{
         grid-area: 4/2/5/2;
     }
-    
     .item5{
         grid-row: 5;
         grid-column: 1/span 2;
     }
-    
     .item7{
-        grid-area: 1/1/2/3;
+        grid-area: 1/1/2/2;
     }
 }
 
-@media all and (max-width: 530px){
+@media all and (max-width: 570px){
+    .grid-container{
+        gap: 20px;
+    }
     .item1{
-        grid-row: 2/span 2;
+        grid-row: 2/span 1;
         grid-column: 1/span 2;
     }
     .item6{
-        grid-area: 3/1/4/3;
+        display: none;
     }
-    
-    
     .item2{
         grid-area: 4/1/5/3;
     }
-    
     .item3{
         grid-area: 1/1/2/3;
     }
-    
     .item4{
-        grid-area: 5/1/6/3;    }
-    
+        grid-area: 5/1/6/3;    }    
     .item5{
-        grid-row: 6;
-        grid-column: 1/span 2;
+        grid-area: 6/1/7/3;
     }
 }
 
